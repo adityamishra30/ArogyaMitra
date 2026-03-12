@@ -1,0 +1,22 @@
+packages:
+  "framer-motion": "For fluid page transitions and interactive micro-animations"
+  "recharts": "For beautiful progress and health data visualization"
+  "date-fns": "For formatting dates in workout logs and progress charts"
+  "clsx": "For constructing Tailwind class names conditionally"
+  "tailwind-merge": "For merging Tailwind classes without conflicts"
+
+images:
+  - path: "artifacts/arogya-mitra/public/images/auth-bg.png"
+    description: "Abstract flowing gradient in vibrant teal, mint green, and deep indigo. Clean, energetic wellness technology vibe."
+    aspect_ratio: "16:9"
+  - path: "artifacts/arogya-mitra/public/images/aromi-avatar.png"
+    description: "A friendly, glowing abstract AI assistant orb or friendly geometric mascot in energetic green and blue hues. Premium, modern."
+    aspect_ratio: "1:1"
+  - path: "artifacts/arogya-mitra/public/images/workout-placeholder.png"
+    description: "Abstract 3d render of dynamic athletic movement, glassmorphism style, vibrant colors"
+    aspect_ratio: "16:9"
+
+notes:
+  - customFetch is assumed to automatically read 'arogya_token' from localStorage for Authorization header
+  - Using wouter for routing
+  - Using generated hooks from @workspace/api-client-react

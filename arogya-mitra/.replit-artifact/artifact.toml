@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "ArogyaMitra - AI Fitness & Wellness"
+version = "1.0.0"
+id = "artifacts/arogya-mitra"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 23519
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/arogya-mitra run dev"
+
+[services.env]
+PORT = "23519"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/arogya-mitra", "run", "build"]
+publicDir = "artifacts/arogya-mitra/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
